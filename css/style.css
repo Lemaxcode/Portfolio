@@ -16,6 +16,10 @@ figure {
   margin: 0;
   padding: 0;
 }
+.icons_svg {
+  width: 50px;
+  height: 50px;
+}
 h1,
 h2,
 h3 {
@@ -102,6 +106,14 @@ div.presentation p {
   padding-top: 15px;
   margin: 10px;
 }
+section#home figure div#svg_icons {
+  display: flex;
+  justify-content: center;
+}
+section#home figure div#svg_icons svg.icons_svg {
+  margin: 10px;
+}
+
 /* ---------Skills------------ */
 
 div#cards_skills {
@@ -200,6 +212,9 @@ div#cards_formation div.card_formation:hover {
   background-color: color(display-p3 0.163 0.163 0.163);
   border-color: color(display-p3 0.283 0.283 0.283);
 }
+section#formation a {
+  color: #ffff57;
+}
 /* Media Queries */
 @media screen and (max-width: 768px) {
   div#cards_projects {
@@ -212,13 +227,13 @@ div#cards_formation div.card_formation:hover {
     flex-wrap: wrap;
     margin: 0;
   }
-
   section#home figure {
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
-  div.presentation {
+
+  .presentation {
     display: flex;
     text-align: justify;
     flex-wrap: wrap;
