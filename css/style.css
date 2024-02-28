@@ -1,0 +1,244 @@
+/* background color(display-p3 0.067 0.067 0.067)
+text color(display-p3 0.706 0.706 0.706)
+titre color(display-p3 0.933 0.933 0.933)
+card color(display-p3 0.135 0.135 0.135)
+hover color(display-p3 0.163 0.163 0.163)
+border color(display-p3 0.228 0.228 0.228)
+border hover color(display-p3 0.283 0.283 0.283) */
+
+/* -----------CSS GLOBAL -------------- */
+
+body {
+  background-color: color(display-p3 0.067 0.067 0.067);
+  font-size: 16px;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3 {
+  color: color(display-p3 0.933 0.933 0.933);
+}
+h2 {
+  margin-bottom: 50px;
+}
+p {
+  color: color(display-p3 0.706 0.706 0.706);
+}
+img.img_profil {
+  filter: grayscale(50%);
+  /* border-radius: 78% 22% 84% 16% / 26% 66% 34% 74%; */
+  border-radius: 90px;
+  border: groove 2px;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px 3px #ffff57;
+}
+img.img_projects {
+  width: 200px;
+  height: 250px;
+  filter: grayscale(100%);
+  object-fit: cover;
+  border-radius: 10px;
+}
+img.icons {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+div.separator {
+  height: 5px;
+  background-color: color(display-p3 0.375 0.375 0.375);
+  border-radius: 3px;
+  width: 50%;
+  margin: 110px auto;
+}
+/* --------CSS SPECIFIQUE----------- */
+/* ----------header----------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 10px;
+  transition: top 0.3s;
+}
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav a {
+  background-color: color(display-p3 0.135 0.135 0.135);
+  text-decoration: none;
+  color: color(display-p3 0.706 0.706 0.706);
+  padding: 15px;
+  margin: 0 10px;
+  border: solid color(display-p3 0.228 0.228 0.228);
+  border-radius: 5px;
+  font-size: 1.7rem;
+  transition: 0.5s ease-in-out;
+}
+header nav a:hover {
+  background-color: color(display-p3 0.163 0.163 0.163);
+  border-color: color(display-p3 0.283 0.283 0.283);
+  box-shadow: 0px 0px 15px 5px #ffff57;
+  transform: scale(1.2);
+}
+/* -----------Aside------------- */
+
+/* ---------Home------------- */
+section#home {
+  margin: 150px 0 0 200px;
+  display: flex;
+}
+div.presentation {
+  padding-left: 50px;
+  font-size: 1.8rem;
+}
+div.presentation p {
+  padding-top: 15px;
+  margin: 10px;
+}
+/* ---------Skills------------ */
+
+div#cards_skills {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 50px;
+  margin-bottom: 50px;
+}
+section#skills div.card_skills {
+  background-color: color(display-p3 0.135 0.135 0.135);
+  width: 200px;
+  height: 250px;
+  border: solid color(display-p3 0.228 0.228 0.228);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 5px 3px #ffff57;
+  transition: 0.5s ease-in-out;
+}
+
+section#skills div.card_skills p {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  color: color(display-p3 0.706 0.706 0.706);
+  padding-left: 50px;
+  margin: 30px 0;
+}
+section#skills div.card_skills:hover {
+  background-color: color(display-p3 0.163 0.163 0.163);
+  border-color: color(display-p3 0.283 0.283 0.283);
+  box-shadow: 0px 0px 15px 5px #ffff57;
+  transform: scale(1.2);
+}
+
+section#skills h2 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 2rem;
+}
+/* ---------------Projects --------------- */
+div#cards_projects {
+  display: flex;
+  justify-content: space-evenly;
+}
+section#projects div.card_projects {
+  background-color: color(display-p3 0.135 0.135 0.135);
+  border: solid color(display-p3 0.228 0.228 0.228);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0px 0px 5px 3px #ffff57;
+  transition: 0.5s ease-in-out;
+}
+section#projects div.card_projects:hover {
+  box-shadow: 0px 0px 15px 5px #ffff57;
+  background-color: color(display-p3 0.163 0.163 0.163);
+  border-color: color(display-p3 0.283 0.283 0.283);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+section#projects h2 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 2rem;
+}
+/* ----------------Formation------------------- */
+section#formation {
+  margin-bottom: 150px;
+}
+
+section#formation h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+div#cards_formation {
+  display: flex;
+  justify-content: space-evenly;
+}
+div#cards_formation div.card_formation {
+  background-color: color(display-p3 0.135 0.135 0.135);
+  border: solid color(display-p3 0.228 0.228 0.228);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 550px;
+  height: 250px;
+  box-shadow: 0px 0px 5px 3px #ffff57;
+  transition: 0.5s ease-in-out;
+}
+div#cards_formation div.card_formation:hover {
+  box-shadow: 0px 0px 15px 5px #ffff57;
+  background-color: color(display-p3 0.163 0.163 0.163);
+  border-color: color(display-p3 0.283 0.283 0.283);
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  div#cards_projects {
+    flex-wrap: wrap;
+  }
+  header nav {
+    flex-wrap: wrap;
+  }
+  section#home {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  section#home figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  div.presentation {
+    display: flex;
+    text-align: justify;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  div#cards_skills,
+  div#cards_formation {
+    flex-wrap: wrap;
+  }
+  div.card_skills,
+  div.card_projects,
+  div.card_formation {
+    margin: 10px;
+  }
+
+  section#projects div.card_projects:hover,
+  section#skills div.card_skills:hover,
+  div#cards_formation div.card_formation:hover {
+    transform: none;
+  }
+}
