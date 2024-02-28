@@ -77,10 +77,10 @@ header nav {
 header nav a {
   background-color: color(display-p3 0.135 0.135 0.135);
   text-decoration: none;
-  color: color(display-p3 0.706 0.706 0.706);
+  color: #ffff57;
   padding: 15px;
   margin: 0 10px;
-  border: solid color(display-p3 0.228 0.228 0.228);
+  border: solid 1px #ffff57;
   border-radius: 5px;
   font-size: 1.7rem;
   transition: 0.5s ease-in-out;
