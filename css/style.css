@@ -8,9 +8,24 @@ border hover color(display-p3 0.283 0.283 0.283) */
 
 /* -----------CSS GLOBAL -------------- */
 
+:root {
+  --pad: 20px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  scroll-behavior: smooth;
+}
 body {
   background-color: color(display-p3 0.067 0.067 0.067);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../imgs/background.jpg); */
+
   font-size: 16px;
+}
+main {
+  width: 100%;
 }
 figure {
   margin: 0;
@@ -38,7 +53,6 @@ p {
 }
 img.img_profil {
   filter: grayscale(50%);
-  /* border-radius: 78% 22% 84% 16% / 26% 66% 34% 74%; */
   border-radius: 90px;
   border: groove 2px;
   width: 250px;
@@ -71,17 +85,23 @@ div.separator {
 /* ----------header----------- */
 header {
   position: fixed;
+  display: flex;
+  justify-content: space-evenly;
   top: 0;
   width: 100%;
   z-index: 1000;
   margin: 10px;
   transition: top 0.3s;
 }
-header nav {
+
+header nav.nav_bar div.nav_links ul {
   display: flex;
-  justify-content: space-evenly;
+  margin-top: 10px;
 }
-header nav a {
+header nav.nav_bar div.nav_links ul li {
+  margin: 0 30px;
+}
+header nav.nav_bar div.nav_links ul li a {
   background-color: color(display-p3 0.135 0.135 0.135);
   text-decoration: none;
   color: rgba(255, 255, 87, 0.8);
@@ -103,14 +123,28 @@ header nav a:hover {
 
 /* ---------Home------------- */
 section#home {
-  margin: 150px 0 0 200px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../imgs/background.jpg);
+  width: 100%;
+  height: 100vh;
 }
-div.presentation {
+section#home div#home_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 80%;
+}
+section#home div.presentation {
   padding-left: 50px;
   font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
 }
-div.presentation p {
+section#home div.presentation p {
   padding-top: 15px;
   margin: 10px;
 }
@@ -132,6 +166,12 @@ div#cards_skills {
 }
 section#skills div.card_skills {
   background-color: color(display-p3 0.135 0.135 0.135);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../imgs/cloud.jpg); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 250px;
   border: solid color(display-p3 0.228 0.228 0.228);
@@ -147,9 +187,8 @@ section#skills div.card_skills p {
   text-align: center;
   align-items: center;
   justify-content: flex-start;
+  width: 65%;
   color: color(display-p3 0.706 0.706 0.706);
-  padding-left: 50px;
-  margin: 30px 0;
 }
 section#skills div.card_skills:hover {
   background-color: color(display-p3 0.163 0.163 0.163);
@@ -170,6 +209,12 @@ div#cards_projects {
 }
 section#projects div.card_projects {
   background-color: color(display-p3 0.135 0.135 0.135);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../imgs/background_pink.jpg); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: solid color(display-p3 0.228 0.228 0.228);
   border-radius: 20px;
   text-align: center;
@@ -178,6 +223,9 @@ section#projects div.card_projects {
   height: 400px;
   box-shadow: 0px 0px 5px 3px #ffff57;
   transition: 0.5s ease-in-out;
+}
+section#projects div.card_projects * {
+  margin: 10px 0;
 }
 section#projects div.card_projects:hover {
   box-shadow: 0px 0px 15px 5px #ffff57;
@@ -205,6 +253,9 @@ div#cards_formation {
   justify-content: space-evenly;
 }
 div#cards_formation div.card_formation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: color(display-p3 0.135 0.135 0.135);
   border: solid color(display-p3 0.228 0.228 0.228);
   border-radius: 20px;
@@ -214,6 +265,9 @@ div#cards_formation div.card_formation {
   height: 250px;
   box-shadow: 0px 0px 5px 3px #ffff57;
   transition: 0.5s ease-in-out;
+}
+div#cards_formation div.card_formation * {
+  margin: 10px 0;
 }
 div#cards_formation div.card_formation:hover {
   box-shadow: 0px 0px 15px 5px #ffff57;
@@ -225,6 +279,16 @@ section#formation a {
 }
 /* Media Queries */
 @media screen and (max-width: 768px) {
+  /* body {
+    font-size: 12px;
+  }
+  img.img_profil {
+    width: 100px;
+    height: 150px;
+  } */
+  #header {
+    display: none;
+  }
   div#cards_projects {
     flex-wrap: wrap;
   }
@@ -235,9 +299,14 @@ section#formation a {
     flex-wrap: wrap;
     margin: 0;
     justify-content: center;
+    height: 100%;
+  }
+  section#home div#home_container {
+    flex-direction: column;
   }
 
   .presentation {
+    font-size: 12px;
     display: flex;
     text-align: justify;
     flex-wrap: wrap;
